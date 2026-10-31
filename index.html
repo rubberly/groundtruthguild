@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ground Truth Guild · Expert human evaluation for domain AI</title>
+  <meta name="description" content="Credentialed nurses, legal professionals and security analysts rate your AI's outputs. Two independent raters per item, expert adjudication on every disagreement. Pilot results in 10 business days.">
+  <meta property="og:title" content="Ground Truth Guild">
+  <meta property="og:description" content="Expert human evaluation and preference data for healthcare, legal and cybersecurity AI teams.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Ground Truth Guild home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect class="mark-bg" width="32" height="32" rx="8"/><path class="mark-fg" d="M9 21.5 14 11l3 6 2-3.5 4 8"/><path class="mark-fg" d="M8 24h16"/></svg>
+        Ground Truth Guild
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="/security">Security</a>
+        <a href="/raters">Become a rater</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">Human evaluation for domain AI</div>
+        <h1>Know whether your AI is right,<br>judged by people who'd know.</h1>
+        <p class="lead">Credentialed nurses, legal professionals and security analysts rate your model's outputs. Every item gets two independent ratings, and an expert settles every disagreement. You get labels you can defend to your customers and your auditors.</p>
+        <div class="actions">
+          <a class="btn primary" href="mailto:LucasMaillet2019@gmail.com?subject=Domain%20Eval%20Sprint%20inquiry">Start a pilot</a>
+          <a class="btn ghost" href="#how">See the process</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap grid two">
+        <div>
+          <div class="eyebrow">The problem</div>
+          <h2>Your in-house experts can't rate 2,000 outputs. Big labeling platforms aren't built for a team your size.</h2>
+        </div>
+        <div>
+          <p>When your team ships a prompt change, a new model or a RAG update into a clinical, legal or security product, someone has to answer one question: <strong>did it get better or worse?</strong></p>
+          <p>Automated LLM judges miss the domain errors that matter most: a wrong dosage, an outdated statute, a misread CVE. Your own clinicians and counsel are too expensive and too busy to grade thousands of answers. The large data platforms are built around foundation-model labs and their volumes.</p>
+          <p>We sit in between: a vetted network of domain experts, a rigorous review process, and a team that works at mid-market scale and speed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <div class="eyebrow">How it works</div>
+        <h2>Two raters, one adjudicator, zero guesswork</h2>
+        <svg class="flow" viewBox="0 0 960 220" role="img" aria-labelledby="flow-title flow-desc">
+          <title id="flow-title">Rating workflow</title>
+          <desc id="flow-desc">Each item goes to two independent expert raters. If they agree, their ratings are combined into the final label. If they disagree, or if either rating fails a quality check, a senior reviewer adjudicates.</desc>
+          <defs><marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10z"/></marker></defs>
+          <rect class="box" x="10" y="80" width="150" height="60" rx="10"/><text x="85" y="106" text-anchor="middle">Your outputs</text><text class="sub" x="85" y="124" text-anchor="middle">prompt + A vs B</text>
+          <rect class="box" x="230" y="20" width="160" height="60" rx="10"/><text x="310" y="46" text-anchor="middle">Expert rater 1</text><text class="sub" x="310" y="64" text-anchor="middle">blind, independent</text>
+          <rect class="box" x="230" y="140" width="160" height="60" rx="10"/><text x="310" y="166" text-anchor="middle">Expert rater 2</text><text class="sub" x="310" y="184" text-anchor="middle">blind, independent</text>
+          <rect class="box hl" x="460" y="80" width="160" height="60" rx="10"/><text x="540" y="106" text-anchor="middle">Agreement check</text><text class="sub" x="540" y="124" text-anchor="middle">+ quality signals</text>
+          <rect class="box" x="700" y="10" width="250" height="60" rx="10"/><text x="825" y="36" text-anchor="middle">Agree → final label</text><text class="sub" x="825" y="54" text-anchor="middle">averaged, with agreement stats</text>
+          <rect class="box hl" x="700" y="150" width="250" height="60" rx="10"/><text x="825" y="176" text-anchor="middle">Disagree → senior reviewer</text><text class="sub" x="825" y="194" text-anchor="middle">sees both, decides the label</text>
+          <path class="arrow" d="M160 100 C195 100 195 50 228 50"/>
+          <path class="arrow" d="M160 120 C195 120 195 170 228 170"/>
+          <path class="arrow" d="M390 50 C425 50 425 100 458 100"/>
+          <path class="arrow" d="M390 170 C425 170 425 120 458 120"/>
+          <path class="arrow" d="M620 100 C660 100 660 40 698 40"/>
+          <path class="arrow" d="M620 120 C660 120 660 180 698 180"/>
+        </svg>
+
+        <ol class="steps">
+          <li><h3>Scope</h3><p class="muted">We agree on the rubric with your domain lead: what counts as accurate, helpful and safe in <em>your</em> product.</p></li>
+          <li><h3>Calibrate</h3><p class="muted">Raters work through sample items together until they apply your rubric the same way.</p></li>
+          <li><h3>Rate</h3><p class="muted">Each item is scored by two experts who can't see each other's work. Each one writes a justification for the rating.</p></li>
+          <li><h3>Adjudicate</h3><p class="muted">Any disagreement, or any rating that fails a quality check, goes to a senior reviewer.</p></li>
+          <li><h3>Deliver</h3><p class="muted">You get labeled data (JSONL), agreement statistics and a findings report you can act on.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="eyebrow">Quality you can audit</div>
+        <h2>How we keep the ratings honest</h2>
+        <div class="grid three">
+          <div class="card feature"><h3>Hidden control items</h3><p class="muted">Items with known answers are mixed into every queue and look identical to real work. Raters whose accuracy on them slips are paused and recalibrated.</p></div>
+          <div class="card feature"><h3>Work-integrity checks</h3><p class="muted">Our platform flags signs of copy-pasted or automated answers: large text dumps, inhuman typing patterns, implausibly fast submissions. A person reviews every flag.</p></div>
+          <div class="card feature"><h3>Verified credentials</h3><p class="muted">Before an SME touches your data, we check their license or certification against the issuing body's public registry and confirm their identity on a live call.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="eyebrow">Domains</div>
+        <h2>Expert raters for regulated, high-stakes AI</h2>
+        <div class="grid three">
+          <div class="card"><h3>Healthcare</h3><ul class="muted"><li>Patient messaging and triage assistants</li><li>Clinical documentation and summarization</li><li>Medication and care-guidance safety</li></ul></div>
+          <div class="card"><h3>Legal</h3><ul class="muted"><li>Contract review and clause extraction</li><li>Legal research answers and citations</li><li>Compliance Q&amp;A</li></ul></div>
+          <div class="card"><h3>Cybersecurity</h3><ul class="muted"><li>Alert triage and incident summaries</li><li>Vulnerability and CVE explanations</li><li>Security copilot answers and remediation advice</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div class="wrap">
+        <div class="eyebrow">Pricing</div>
+        <h2>Start with a fixed-price pilot</h2>
+        <div class="grid three">
+          <div class="card feature">
+            <h3>Domain Eval Sprint</h3>
+            <div class="price">$9,500 <small>fixed</small></div>
+            <ul class="muted">
+              <li>500 pairwise comparisons</li>
+              <li>2 credentialed raters per item + adjudication</li>
+              <li>Win rate, failure-mode breakdown, worst-case examples</li>
+              <li>Full labeled export</li>
+              <li>10 business days</li>
+            </ul>
+            <p class="note">The full sprint fee is credited toward a retainer signed within 30 days.</p>
+          </div>
+          <div class="card">
+            <h3>Per-label</h3>
+            <div class="price">from $7 <small>per label</small></div>
+            <ul class="muted">
+              <li>Generalist preference and safety: $6–9</li>
+              <li>Credentialed SME (clinical, legal, security): $25–45</li>
+              <li>Senior SME (physician, attorney): from $50</li>
+              <li>Every label double-rated and adjudicated</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Monthly retainer</h3>
+            <div class="price">from $12k <small>/ month</small></div>
+            <ul class="muted">
+              <li>Reserved expert capacity</li>
+              <li>A dedicated rater pod that learns your product</li>
+              <li>Regular reports and calibration sessions</li>
+              <li>3-month minimum, then month to month</li>
+            </ul>
+          </div>
+        </div>
+        <p class="note">Need experts to <em>write</em> fine-tuning data, red-team your model or build a rubric from scratch? We also work at hourly rates. Ask for a quote.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap prose">
+        <div class="eyebrow">FAQ</div>
+        <h2>Common questions</h2>
+        <details><summary>Why human raters instead of an LLM judge?</summary><p>LLM judges are useful for broad, cheap screening, but they share blind spots with the models they grade. In domains where one wrong fact causes harm, you need a person who'd catch it. Many teams use our labels to check and tune their automated judges.</p></details>
+        <details><summary>What data do you need from us?</summary><p>Prompts and model outputs, usually as JSON or CSV. For comparisons, send two responses per prompt. They can come from two models, two prompts, or your model against a competitor's.</p></details>
+        <details><summary>Can you handle patient data (PHI)?</summary><p>Tell us before you send any. We'll scope de-identification, or a BAA with HIPAA-eligible hosting, before any PHI is shared. See <a href="/security">Security</a>.</p></details>
+        <details><summary>Who owns the labels?</summary><p>You do. All ratings, justifications and reports are assigned to you on payment.</p></details>
+        <details><summary>How fast can you start?</summary><p>A sprint usually starts within a week of scoping, depending on the domain and how many credentialed raters it needs.</p></details>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="callout">
+          <h2>Find out how your model really performs in your domain.</h2>
+          <p class="muted">Send us a short description of your AI feature. We'll reply with a scoped sprint proposal. If it helps, we'll first rate 10 of your public outputs for free, so you can see the quality before you commit.</p>
+          <div class="actions"><a class="btn primary" href="mailto:LucasMaillet2019@gmail.com?subject=Domain%20Eval%20Sprint%20inquiry&amp;body=Company%3A%0AAI%20feature%20to%20evaluate%3A%0ADomain%20(healthcare%20%2F%20legal%20%2F%20security%20%2F%20other)%3A%0AApprox.%20number%20of%20items%3A%0ATimeline%3A">Request a sprint proposal</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Ground Truth Guild</span>
+      <span><a href="/security">Security</a> · <a href="/privacy">Privacy</a> · <a href="/raters">Become a rater</a> · <a href="mailto:LucasMaillet2019@gmail.com">Contact</a></span>
+    </div>
+  </footer>
+</body>
+</html>

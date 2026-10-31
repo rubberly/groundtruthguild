@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Security &amp; data handling · Ground Truth Guild</title>
+  <meta name="description" content="How Ground Truth Guild protects client data: access control, rater confidentiality, retention and PHI handling.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Ground Truth Guild home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect class="mark-bg" width="32" height="32" rx="8"/><path class="mark-fg" d="M9 21.5 14 11l3 6 2-3.5 4 8"/><path class="mark-fg" d="M8 24h16"/></svg>
+        Ground Truth Guild
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="/#how">How it works</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/security" aria-current="page">Security</a>
+        <a href="/raters">Become a rater</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section>
+      <div class="wrap prose">
+        <div class="eyebrow">Security &amp; data handling</div>
+        <h1>Your data stays on our platform, under our controls.</h1>
+        <p class="lead muted">This page describes how we handle client data today. If your security team has a questionnaire, send it over and we'll answer it in writing.</p>
+
+        <h2>Access</h2>
+        <ul>
+          <li>Raters only see the items assigned to them, on our rating platform, while the task is open.</li>
+          <li>Raters have no bulk download or export. Labeled data exports are available to our administrators only.</li>
+          <li>Accounts are invitation-only and role-based (rater, reviewer, administrator). Suspending an account ends its sessions immediately.</li>
+          <li>Passwords are stored as salted scrypt hashes. Session tokens are random, HTTP-only and stored only as hashes.</li>
+          <li>The platform is served over HTTPS with a strict content security policy.</li>
+        </ul>
+
+        <h2>People</h2>
+        <ul>
+          <li>Every rater signs an NDA and an IP assignment before they see any client data.</li>
+          <li>Subject-matter experts' credentials are verified against the issuing body's public registry, and their identity is confirmed on a live call.</li>
+          <li>Raters are told about our work-integrity monitoring and agree to it in writing.</li>
+        </ul>
+
+        <h2>Retention</h2>
+        <ul>
+          <li>By default, client data is deleted within 30 days of project close, or sooner on request.</li>
+          <li>All labels, justifications and reports belong to you.</li>
+        </ul>
+
+        <h2>Healthcare data (PHI)</h2>
+        <p>Please don't send protected health information without talking to us first. For projects that need PHI, we'll agree on de-identification, or a Business Associate Agreement and HIPAA-eligible hosting, <em>before</em> any data is shared. Most evaluation projects work well with synthetic or de-identified data.</p>
+
+        <h2>What we don't claim</h2>
+        <p>We're a young company and don't yet hold a SOC 2 report. If your procurement process requires one, tell us at the start so we can discuss what's possible.</p>
+
+        <p><a class="btn primary" href="mailto:LucasMaillet2019@gmail.com?subject=Security%20questionnaire">Send a security questionnaire</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Ground Truth Guild</span>
+      <span><a href="/privacy">Privacy</a> · <a href="/raters">Become a rater</a> · <a href="mailto:LucasMaillet2019@gmail.com">Contact</a></span>
+    </div>
+  </footer>
+</body>
+</html>

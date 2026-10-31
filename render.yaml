@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: ground-truth-guild
+    runtime: static
+    staticPublishPath: .
+    buildCommand: ""
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /*
+        name: Content-Security-Policy
+        value: "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+    routes:
+      - type: rewrite
+        source: /raters
+        destination: /raters.html
+      - type: rewrite
+        source: /security
+        destination: /security.html
+      - type: rewrite
+        source: /privacy
+        destination: /privacy.html
