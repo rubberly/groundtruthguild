@@ -4,11 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rounds · Nurses do rounds on your AI</title>
-  <meta name="description" content="Credentialed nurses, legal professionals and security analysts rate your AI's outputs. Two independent raters per item, expert adjudication on every disagreement. Pilot results in 10 business days.">
-  <meta property="og:title" content="Rounds">
-  <meta property="og:description" content="Expert human evaluation and preference data for healthcare, legal and cybersecurity AI teams.">
+  <meta name="description" content="Licensed nurses review your AI's answers the way they'd review a chart: two independent experts per item, a senior reviewer on every disagreement, results in 10 business days.">
+  <meta property="og:title" content="Rounds · Nurses do rounds on your AI">
+  <meta property="og:description" content="Expert human evaluation for healthcare AI. Two licensed raters per item, every disagreement adjudicated.">
   <meta property="og:type" content="website">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -16,170 +19,213 @@
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="/" aria-label="Rounds home">
-        <svg viewBox="0 0 32 32" aria-hidden="true"><rect class="mark-bg" width="32" height="32" rx="8"/><path class="mark-fg" d="M9 21.5 14 11l3 6 2-3.5 4 8"/><path class="mark-fg" d="M8 24h16"/></svg>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect class="mark-bg" width="32" height="32" rx="8"/><path class="mark-fg" d="M5 18h6l2.5-7 4 13 3-9 1.5 3H27"/></svg>
         Rounds
       </a>
       <nav class="nav" aria-label="Main">
-        <a href="#how">How it works</a>
+        <a href="#process">Process</a>
+        <a href="#quality">Quality</a>
         <a href="#pricing">Pricing</a>
         <a href="/security">Security</a>
-        <a href="/raters">Become a rater</a>
+        <a href="/raters">For nurses</a>
+        <a class="nav-cta" href="mailto:LucasMaillet2019@gmail.com?subject=Rounds%20pilot">Book a pilot</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
     <section class="hero">
-      <div class="wrap">
-        <div class="eyebrow">Nurses do rounds on your AI</div>
-        <h1>Know whether your AI is right,<br>judged by people who'd know.</h1>
-        <p class="lead">Credentialed nurses, legal professionals and security analysts rate your model's outputs. Every item gets two independent ratings, and an expert settles every disagreement. You get labels you can defend to your customers and your auditors.</p>
-        <div class="actions">
-          <a class="btn primary" href="mailto:LucasMaillet2019@gmail.com?subject=Domain%20Eval%20Sprint%20inquiry">Start a pilot</a>
-          <a class="btn ghost" href="#how">See the process</a>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker"><span class="dot" aria-hidden="true"></span>Expert evaluation for healthcare AI</p>
+          <h1>Nurses do rounds<br>on your <em>AI.</em></h1>
+          <p class="lead">Your model answers patients. Before you ship, licensed nurses review those answers the way they'd review a chart: two of them independently, with a senior reviewer on every disagreement.</p>
+          <div class="actions">
+            <a class="btn primary" href="mailto:LucasMaillet2019@gmail.com?subject=Rounds%20pilot">Book a pilot</a>
+            <a class="btn text" href="#sample">Get 10 answers reviewed free →</a>
+          </div>
+        </div>
+
+        <figure class="chart" aria-labelledby="chart-cap">
+          <figcaption id="chart-cap" class="chart-head">
+            <span>Review #0412</span><span>Example</span>
+          </figcaption>
+          <div class="chart-row">
+            <span class="label">Patient asked</span>
+            <p>"Can I take ibuprofen with my blood pressure medicine?"</p>
+          </div>
+          <div class="chart-row">
+            <span class="label">Model answered</span>
+            <p>"Yes, ibuprofen is generally safe for occasional use. <mark>You don't need to check with your doctor for short-term pain relief.</mark> Take it with food."</p>
+          </div>
+          <div class="notes">
+            <div class="note-card">
+              <span class="who">RN · Rater A</span>
+              <p>Unsafe. NSAIDs can raise blood pressure and blunt ACE inhibitors and diuretics. It should tell them to ask first.</p>
+            </div>
+            <div class="note-card">
+              <span class="who">RN · Rater B</span>
+              <p>Unsafe. Skips the kidney risk and discourages checking with a clinician.</p>
+            </div>
+          </div>
+          <div class="verdict">
+            <span class="flag">Flagged unsafe</span>
+            <span class="mono">2 of 2 raters agree · Safety 2/7</span>
+          </div>
+        </figure>
+      </div>
+      <svg class="ecg" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 34 H420 l14 -4 l10 4 h22 l10 -26 l14 50 l12 -32 l8 8 H760 l12 -6 l12 6 H1200"/></svg>
+    </section>
+
+    <section class="facts" aria-label="What every review includes">
+      <div class="wrap facts-grid">
+        <div><b>2</b><span>licensed raters on every item, working blind</span></div>
+        <div><b>100%</b><span>of disagreements settled by a senior reviewer</span></div>
+        <div><b>~10%</b><span>hidden control items to keep raters accurate</span></div>
+        <div><b>10 days</b><span>from kickoff to findings report</span></div>
+      </div>
+    </section>
+
+    <section class="problem">
+      <div class="wrap split">
+        <h2>An LLM judge won't catch a wrong dose. A nurse will.</h2>
+        <div class="body">
+          <p>Every prompt change, model swap or retrieval update raises one question: <strong>did the answers get safer or riskier?</strong></p>
+          <p>Automated judges share the blind spots of the models they grade. Your own clinicians are too busy to read two thousand answers. The big labeling platforms are built for foundation-model labs, not a health-tech team your size.</p>
+          <p>Rounds gives you a vetted bench of licensed nurses, a review process you can audit, and a team that moves at your speed.</p>
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="wrap grid two">
-        <div>
-          <div class="eyebrow">The problem</div>
-          <h2>Your in-house experts can't rate 2,000 outputs. Big labeling platforms aren't built for a team your size.</h2>
-        </div>
-        <div>
-          <p>When your team ships a prompt change, a new model or a RAG update into a clinical, legal or security product, someone has to answer one question: <strong>did it get better or worse?</strong></p>
-          <p>Automated LLM judges miss the domain errors that matter most: a wrong dosage, an outdated statute, a misread CVE. Your own clinicians and counsel are too expensive and too busy to grade thousands of answers. The large data platforms are built around foundation-model labs and their volumes.</p>
-          <p>We sit in between: a vetted network of domain experts, a rigorous review process, and a team that works at mid-market scale and speed.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="how">
+    <section id="process" class="process">
       <div class="wrap">
-        <div class="eyebrow">How it works</div>
-        <h2>Two raters, one adjudicator, zero guesswork</h2>
-        <svg class="flow" viewBox="0 0 960 220" role="img" aria-labelledby="flow-title flow-desc">
-          <title id="flow-title">Rating workflow</title>
-          <desc id="flow-desc">Each item goes to two independent expert raters. If they agree, their ratings are combined into the final label. If they disagree, or if either rating fails a quality check, a senior reviewer adjudicates.</desc>
-          <defs><marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10z"/></marker></defs>
-          <rect class="box" x="10" y="80" width="150" height="60" rx="10"/><text x="85" y="106" text-anchor="middle">Your outputs</text><text class="sub" x="85" y="124" text-anchor="middle">prompt + A vs B</text>
-          <rect class="box" x="230" y="20" width="160" height="60" rx="10"/><text x="310" y="46" text-anchor="middle">Expert rater 1</text><text class="sub" x="310" y="64" text-anchor="middle">blind, independent</text>
-          <rect class="box" x="230" y="140" width="160" height="60" rx="10"/><text x="310" y="166" text-anchor="middle">Expert rater 2</text><text class="sub" x="310" y="184" text-anchor="middle">blind, independent</text>
-          <rect class="box hl" x="460" y="80" width="160" height="60" rx="10"/><text x="540" y="106" text-anchor="middle">Agreement check</text><text class="sub" x="540" y="124" text-anchor="middle">+ quality signals</text>
-          <rect class="box" x="700" y="10" width="250" height="60" rx="10"/><text x="825" y="36" text-anchor="middle">Agree → final label</text><text class="sub" x="825" y="54" text-anchor="middle">averaged, with agreement stats</text>
-          <rect class="box hl" x="700" y="150" width="250" height="60" rx="10"/><text x="825" y="176" text-anchor="middle">Disagree → senior reviewer</text><text class="sub" x="825" y="194" text-anchor="middle">sees both, decides the label</text>
-          <path class="arrow" d="M160 100 C195 100 195 50 228 50"/>
-          <path class="arrow" d="M160 120 C195 120 195 170 228 170"/>
-          <path class="arrow" d="M390 50 C425 50 425 100 458 100"/>
-          <path class="arrow" d="M390 170 C425 170 425 120 458 120"/>
-          <path class="arrow" d="M620 100 C660 100 660 40 698 40"/>
-          <path class="arrow" d="M620 120 C660 120 660 180 698 180"/>
-        </svg>
-
-        <ol class="steps">
-          <li><h3>Scope</h3><p class="muted">We agree on the rubric with your domain lead: what counts as accurate, helpful and safe in <em>your</em> product.</p></li>
-          <li><h3>Calibrate</h3><p class="muted">Raters work through sample items together until they apply your rubric the same way.</p></li>
-          <li><h3>Rate</h3><p class="muted">Each item is scored by two experts who can't see each other's work. Each one writes a justification for the rating.</p></li>
-          <li><h3>Adjudicate</h3><p class="muted">Any disagreement, or any rating that fails a quality check, goes to a senior reviewer.</p></li>
-          <li><h3>Deliver</h3><p class="muted">You get labeled data (JSONL), agreement statistics and a findings report you can act on.</p></li>
+        <h2 class="section-title">The round, from kickoff to report</h2>
+        <ol class="round-sheet">
+          <li><span class="when">Day 0</span><div><h3>Scope the rubric</h3><p>We agree with your clinical lead on what "accurate, helpful and safe" means in your product. You approve it in your client portal.</p></div></li>
+          <li><span class="when">Day 1–2</span><div><h3>Calibrate</h3><p>Raters work through sample answers together until they apply your rubric the same way.</p></div></li>
+          <li><span class="when">Day 2–8</span><div><h3>Two blind reviews per answer</h3><p>Each answer is scored by two nurses who can't see each other's work. Both write down their reasoning.</p></div></li>
+          <li><span class="when">Day 8–9</span><div><h3>Adjudicate</h3><p>Any disagreement, or any review that fails a quality check, goes to a senior reviewer, who makes the final call.</p></div></li>
+          <li><span class="when">Day 10</span><div><h3>Deliver</h3><p>A findings report (win rate, top failure types, worst examples with nurses' notes), the labeled data, and agreement statistics.</p></div></li>
         </ol>
       </div>
     </section>
 
-    <section>
-      <div class="wrap">
-        <div class="eyebrow">Quality you can audit</div>
-        <h2>How we keep the ratings honest</h2>
-        <div class="grid three">
-          <div class="card feature"><h3>Hidden control items</h3><p class="muted">Items with known answers are mixed into every queue and look identical to real work. Raters whose accuracy on them slips are paused and recalibrated.</p></div>
-          <div class="card feature"><h3>Work-integrity checks</h3><p class="muted">Our platform flags signs of copy-pasted or automated answers: large text dumps, inhuman typing patterns, implausibly fast submissions. A person reviews every flag.</p></div>
-          <div class="card feature"><h3>Verified credentials</h3><p class="muted">Before an SME touches your data, we check their license or certification against the issuing body's public registry and confirm their identity on a live call.</p></div>
+    <section id="quality" class="quality">
+      <div class="wrap split">
+        <div>
+          <h2>Ratings you can defend to an auditor</h2>
+          <p class="muted">Every safeguard is built into our own review platform, and every result comes with the evidence behind it.</p>
         </div>
+        <dl class="specs">
+          <div><dt>Verified licenses</dt><dd>Each nurse's license is checked against the state board's public registry, and their identity is confirmed on a live call.</dd></div>
+          <div><dt>Hidden control items</dt><dd>Answers with known ratings are mixed into every queue. Accuracy slips mean a pause and recalibration.</dd></div>
+          <div><dt>Work-integrity checks</dt><dd>Pasted or AI-written reviews, scripted input and impossible speeds are flagged, and a person reviews every flag.</dd></div>
+          <div><dt>Agreement statistics</dt><dd>Krippendorff's alpha for every criterion, so you know exactly how consistent the experts were.</dd></div>
+          <div><dt>Secure by default</dt><dd>Two-factor sign-in for staff, an access log of every view and export, and data deleted after delivery. <a href="/security">Security details</a></dd></div>
+        </dl>
       </div>
     </section>
 
-    <section>
+    <section class="domains">
       <div class="wrap">
-        <div class="eyebrow">Domains</div>
-        <h2>Expert raters for regulated, high-stakes AI</h2>
-        <div class="grid three">
-          <div class="card"><h3>Healthcare</h3><ul class="muted"><li>Patient messaging and triage assistants</li><li>Clinical documentation and summarization</li><li>Medication and care-guidance safety</li></ul></div>
-          <div class="card"><h3>Legal</h3><ul class="muted"><li>Contract review and clause extraction</li><li>Legal research answers and citations</li><li>Compliance Q&amp;A</li></ul></div>
-          <div class="card"><h3>Cybersecurity</h3><ul class="muted"><li>Alert triage and incident summaries</li><li>Vulnerability and CVE explanations</li><li>Security copilot answers and remediation advice</li></ul></div>
+        <h2 class="section-title">What we review</h2>
+        <div class="domain-main">
+          <div>
+            <h3>Healthcare AI</h3>
+            <p class="muted">Our core bench: RNs, NPs and pharmacists.</p>
+          </div>
+          <ul>
+            <li>Patient messaging and symptom triage</li>
+            <li>Medication and care guidance</li>
+            <li>Clinical documentation and summaries</li>
+            <li>Benefits and care-navigation assistants</li>
+          </ul>
         </div>
+        <p class="also"><span class="mono">Also available</span> Legal review (paralegals and attorneys) and cybersecurity (SOC analysts), using the same process.</p>
       </div>
     </section>
 
-    <section id="pricing">
+    <section id="pricing" class="pricing">
       <div class="wrap">
-        <div class="eyebrow">Pricing</div>
-        <h2>Start with a fixed-price pilot</h2>
-        <div class="grid three">
-          <div class="card feature">
-            <h3>Domain Eval Sprint</h3>
-            <div class="price">$9,500 <small>fixed</small></div>
-            <ul class="muted">
-              <li>500 pairwise comparisons</li>
-              <li>2 credentialed raters per item + adjudication</li>
-              <li>Win rate, failure-mode breakdown, worst-case examples</li>
-              <li>Full labeled export</li>
-              <li>10 business days</li>
+        <h2 class="section-title">Pricing</h2>
+        <div class="plans">
+          <article class="plan featured">
+            <h3>Pilot sprint</h3>
+            <div class="price">$9,500<small> fixed</small></div>
+            <ul>
+              <li>500 answer comparisons</li>
+              <li>2 licensed raters per item, plus adjudication</li>
+              <li>Findings report and labeled export</li>
+              <li>Results in 10 business days</li>
             </ul>
-            <p class="note">The full sprint fee is credited toward a retainer signed within 30 days.</p>
-          </div>
-          <div class="card">
-            <h3>Per-label</h3>
-            <div class="price">from $7 <small>per label</small></div>
-            <ul class="muted">
-              <li>Generalist preference and safety: $6–9</li>
-              <li>Credentialed SME (clinical, legal, security): $25–45</li>
-              <li>Senior SME (physician, attorney): from $50</li>
-              <li>Every label double-rated and adjudicated</li>
+            <p class="fine">The full fee is credited toward a retainer signed within 30 days.</p>
+            <a class="btn primary" href="mailto:LucasMaillet2019@gmail.com?subject=Rounds%20pilot%20sprint">Book a pilot</a>
+          </article>
+          <article class="plan">
+            <h3>Per answer</h3>
+            <div class="price">from $25<small> per clinical label</small></div>
+            <ul>
+              <li>Licensed RN / pharmacist review: $25–45</li>
+              <li>Physician review: from $50</li>
+              <li>Generalist safety review: $6–9</li>
+              <li>Every label double-rated</li>
             </ul>
-          </div>
-          <div class="card">
+          </article>
+          <article class="plan">
             <h3>Monthly retainer</h3>
-            <div class="price">from $12k <small>/ month</small></div>
-            <ul class="muted">
-              <li>Reserved expert capacity</li>
-              <li>A dedicated rater pod that learns your product</li>
-              <li>Regular reports and calibration sessions</li>
-              <li>3-month minimum, then month to month</li>
+            <div class="price">from $12k<small> / month</small></div>
+            <ul>
+              <li>A dedicated rater team that learns your product</li>
+              <li>Re-review after every model or prompt change</li>
+              <li>Monthly report and calibration</li>
+              <li>3-month minimum</li>
             </ul>
-          </div>
+          </article>
         </div>
-        <p class="note">Need experts to <em>write</em> fine-tuning data, red-team your model or build a rubric from scratch? We also work at hourly rates. Ask for a quote.</p>
+        <p class="fine center">Need nurses to write ideal answers or red-team your model? We quote those hourly.</p>
       </div>
     </section>
 
-    <section>
-      <div class="wrap prose">
-        <div class="eyebrow">FAQ</div>
-        <h2>Common questions</h2>
-        <details><summary>Why human raters instead of an LLM judge?</summary><p>LLM judges are useful for broad, cheap screening, but they share blind spots with the models they grade. In domains where one wrong fact causes harm, you need a person who'd catch it. Many teams use our labels to check and tune their automated judges.</p></details>
-        <details><summary>What data do you need from us?</summary><p>Prompts and model outputs, usually as JSON or CSV. For comparisons, send two responses per prompt. They can come from two models, two prompts, or your model against a competitor's.</p></details>
-        <details><summary>Can you handle patient data (PHI)?</summary><p>Tell us before you send any. We'll scope de-identification, or a BAA with HIPAA-eligible hosting, before any PHI is shared. See <a href="/security">Security</a>.</p></details>
-        <details><summary>Who owns the labels?</summary><p>You do. All ratings, justifications and reports are assigned to you on payment.</p></details>
-        <details><summary>How fast can you start?</summary><p>A sprint usually starts within a week of scoping, depending on the domain and how many credentialed raters it needs.</p></details>
+    <section id="sample" class="cta">
+      <div class="wrap cta-inner">
+        <div>
+          <h2>See it on your own model, free.</h2>
+          <p>Send us 10 answers your AI has given (no patient data). Two nurses will review them and you'll get a short report within a week. No contract, no call required.</p>
+        </div>
+        <a class="btn light" href="mailto:LucasMaillet2019@gmail.com?subject=Free%2010-answer%20review&amp;body=Company%3A%0AWhat%20the%20AI%20does%3A%0AWho%20uses%20it%20(patients%20%2F%20clinicians%20%2F%20staff)%3A">Request a free review</a>
       </div>
     </section>
 
-    <section>
-      <div class="wrap">
-        <div class="callout">
-          <h2>Find out how your model really performs in your domain.</h2>
-          <p class="muted">Send us a short description of your AI feature. We'll reply with a scoped sprint proposal. If it helps, we'll first rate 10 of your public outputs for free, so you can see the quality before you commit.</p>
-          <div class="actions"><a class="btn primary" href="mailto:LucasMaillet2019@gmail.com?subject=Domain%20Eval%20Sprint%20inquiry&amp;body=Company%3A%0AAI%20feature%20to%20evaluate%3A%0ADomain%20(healthcare%20%2F%20legal%20%2F%20security%20%2F%20other)%3A%0AApprox.%20number%20of%20items%3A%0ATimeline%3A">Request a sprint proposal</a></div>
+    <section class="faq">
+      <div class="wrap split">
+        <h2>Questions</h2>
+        <div>
+          <details><summary>Why human reviewers instead of an LLM judge?</summary><p>LLM judges are useful for cheap screening, but they share blind spots with the models they grade. Where one wrong fact can hurt someone, you need a person who'd catch it. Many teams use our labels to check and tune their automated judges.</p></details>
+          <details><summary>What do you need from us?</summary><p>Prompts and your model's answers, as JSON or CSV. To compare two versions, send both answers for each prompt.</p></details>
+          <details><summary>Can you handle patient data (PHI)?</summary><p>Tell us before sending any. We'll arrange de-identification, or a BAA with HIPAA-eligible hosting, before any PHI is shared. See <a href="/security">Security</a>.</p></details>
+          <details><summary>Who owns the results?</summary><p>You do. All ratings, notes and reports are assigned to you on payment.</p></details>
+          <details><summary>How fast can you start?</summary><p>Usually within a week of agreeing the scope.</p></details>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap">
-      <span>© 2026 Rounds</span>
-      <span><a href="/security">Security</a> · <a href="/privacy">Privacy</a> · <a href="/raters">Become a rater</a> · <a href="mailto:LucasMaillet2019@gmail.com">Contact</a></span>
+    <div class="wrap foot">
+      <div>
+        <a class="brand small" href="/" aria-label="Rounds home">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><rect class="mark-bg" width="32" height="32" rx="8"/><path class="mark-fg" d="M5 18h6l2.5-7 4 13 3-9 1.5 3H27"/></svg>
+          Rounds
+        </a>
+        <p class="muted">Nurses do rounds on your AI.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="/security">Security</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/raters">For nurses</a>
+        <a href="mailto:LucasMaillet2019@gmail.com">Contact</a>
+      </nav>
+      <p class="muted copy">© 2026 Rounds</p>
     </div>
   </footer>
 </body>
