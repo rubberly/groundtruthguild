@@ -1,4 +1,4 @@
-# Ground Truth Guild: marketing site
+# Rounds: marketing site
 
 A static site with no build step, deployed on Render with `render.yaml` (a Blueprint).
 
