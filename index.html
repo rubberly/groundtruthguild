@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap">
   <link rel="stylesheet" href="/styles.css">
+  <script src="/estimator.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -23,10 +24,10 @@
         Rounds
       </a>
       <nav class="nav" aria-label="Main">
-        <a href="#process">Process</a>
-        <a href="#quality">Quality</a>
-        <a href="#pricing">Pricing</a>
-        <a href="/security">Security</a>
+        <a href="/#fields">Fields</a>
+        <a href="/sample-report">Sample report</a>
+        <a href="/compare">Compare</a>
+        <a href="/#pricing">Pricing</a>
         <a href="/raters">Become a rater</a>
         <a class="nav-cta" href="mailto:LucasMaillet2019@gmail.com?subject=Rounds%20pilot">Book a pilot</a>
       </nav>
@@ -137,18 +138,18 @@
       </div>
     </section>
 
-    <section class="domains">
+    <section id="fields" class="domains">
       <div class="wrap">
         <h2 class="section-title">Experts for almost any field</h2>
         <div class="fields">
-          <div><h3>Healthcare</h3><p>Nurses, pharmacists, physicians. Patient messaging, triage, medication guidance, clinical notes.</p></div>
-          <div><h3>Legal</h3><p>Paralegals and attorneys. Contract review, legal research, citations, compliance answers.</p></div>
-          <div><h3>Finance</h3><p>Accountants, analysts, advisors. Tax, accounting, investing and banking assistants.</p></div>
-          <div><h3>Software &amp; code</h3><p>Working engineers. Code generation, debugging, code review and agent tasks.</p></div>
-          <div><h3>Cybersecurity</h3><p>SOC analysts and pen-testers. Alert triage, CVE explanations, remediation advice.</p></div>
-          <div><h3>Science &amp; math</h3><p>Graduate-level STEM experts. Reasoning, problem solving, technical accuracy.</p></div>
-          <div><h3>Education</h3><p>Teachers and tutors. Tutoring bots, explanations, grading and feedback.</p></div>
-          <div><h3>Languages &amp; writing</h3><p>Native speakers, editors, translators. Tone, fluency, translation, everyday helpfulness.</p></div>
+          <a class="field-link" href="/for/healthcare"><h3>Healthcare <span aria-hidden="true">→</span></h3><p>Nurses, pharmacists, physicians. Patient messaging, triage, medication guidance, clinical notes.</p></a>
+          <a class="field-link" href="/for/legal"><h3>Legal <span aria-hidden="true">→</span></h3><p>Paralegals and attorneys. Contract review, legal research, citations, compliance answers.</p></a>
+          <a class="field-link" href="/for/finance"><h3>Finance <span aria-hidden="true">→</span></h3><p>Accountants, analysts, advisors. Tax, accounting, investing and banking assistants.</p></a>
+          <a class="field-link" href="/for/software"><h3>Software &amp; code <span aria-hidden="true">→</span></h3><p>Working engineers. Code generation, debugging, code review and agent tasks.</p></a>
+          <a class="field-link" href="/for/security"><h3>Cybersecurity <span aria-hidden="true">→</span></h3><p>SOC analysts and pen-testers. Alert triage, CVE explanations, remediation advice.</p></a>
+          <a class="field-link" href="/for/science"><h3>Science &amp; math <span aria-hidden="true">→</span></h3><p>Graduate-level STEM experts. Reasoning, problem solving, technical accuracy.</p></a>
+          <a class="field-link" href="/for/education"><h3>Education <span aria-hidden="true">→</span></h3><p>Teachers and tutors. Tutoring bots, explanations, grading and feedback.</p></a>
+          <a class="field-link" href="/for/languages"><h3>Languages &amp; writing <span aria-hidden="true">→</span></h3><p>Native speakers, editors, translators. Tone, fluency, translation, everyday helpfulness.</p></a>
         </div>
         <p class="also"><span class="mono">Don't see your field?</span> Tell us what your AI does. If there's a credential for it, we'll find and vet the experts.</p>
       </div>
@@ -191,6 +192,26 @@
             </ul>
           </article>
         </div>
+        <form class="estimator" id="estimator" aria-labelledby="est-title" novalidate>
+          <h3 id="est-title">Estimate your project</h3>
+          <div class="est-grid">
+            <div><label for="est-items">Answers to review</label><input id="est-items" type="number" min="50" max="100000" step="50" value="500"></div>
+            <div><label for="est-level">Who reviews</label>
+              <select id="est-level">
+                <option value="generalist">Careful generalists</option>
+                <option value="expert" selected>Credentialed experts (nurse, paralegal, engineer…)</option>
+                <option value="senior">Senior experts (physician, attorney)</option>
+              </select></div>
+            <div><label for="est-type">Task</label>
+              <select id="est-type">
+                <option value="compare" selected>Compare two answers</option>
+                <option value="grade">Grade one answer</option>
+                <option value="write">Write ideal answers</option>
+              </select></div>
+          </div>
+          <output class="est-out" id="est-out" for="est-items est-level est-type" aria-live="polite">Turn on JavaScript to see an estimate, or <a href="mailto:LucasMaillet2019@gmail.com?subject=Rounds%20quote">ask for a quote</a>.</output>
+          <p class="fine">A rough range, not a quote. Every answer is reviewed by two experts with adjudication included. Final pricing follows a short scoping call.</p>
+        </form>
         <p class="fine center">Training data, expert-written ideal answers and red-teaming are quoted per project.</p>
       </div>
     </section>
@@ -229,6 +250,8 @@
         <p class="muted">Experts do rounds on your AI.</p>
       </div>
       <nav aria-label="Footer">
+        <a href="/sample-report">Sample report</a>
+        <a href="/compare">Compare</a>
         <a href="/security">Security</a>
         <a href="/privacy">Privacy</a>
         <a href="/raters">Become a rater</a>

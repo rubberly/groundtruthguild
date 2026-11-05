@@ -259,3 +259,65 @@ footer .wrap > span { color: var(--muted); }
   .fields { grid-template-columns: 1fr; }
   .fields > div:nth-child(n) { padding-left: 0; border-left: 0; }
 }
+
+/* --- Linked field cards --- */
+a.field-link { color: inherit; text-decoration: none; display: block; transition: background .15s; }
+a.field-link:hover { background: rgba(255, 255, 255, .05); }
+a.field-link h3 span { color: #5cc4b0; font-family: var(--sans); font-size: 1rem; }
+
+/* --- Secondary pages --- */
+.h1-sm { font-size: clamp(2.3rem, 5vw, 3.8rem); }
+.mt { margin-top: 1.4em; }
+.ticks { list-style: none; padding: 0; margin: 0; }
+.ticks li { padding: 8px 0 8px 24px; position: relative; border-bottom: 1px solid var(--rule); }
+.ticks li::before { content: ""; position: absolute; left: 2px; top: 17px; width: 10px; height: 5px; border-left: 2px solid var(--teal); border-bottom: 2px solid var(--teal); transform: rotate(-45deg); }
+.small { font-size: .9rem; }
+
+/* Sample report */
+.report-sample { padding-top: 0; }
+.paper { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(24px, 5vw, 56px); max-width: 920px; margin: 0 auto; box-shadow: 0 24px 48px -32px rgba(15, 29, 33, .35); }
+.paper h3 { font-family: var(--mono); font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin: 2.2em 0 1em; }
+.paper .headline { font-family: var(--display); font-size: clamp(1.25rem, 2.4vw, 1.6rem); line-height: 1.35; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; margin-top: 24px; }
+.stat { background: var(--surface); padding: 16px; }
+.stat b { display: block; font-family: var(--display); font-size: 1.8rem; font-weight: 500; color: var(--teal); line-height: 1.1; }
+.stat span { font-size: .85rem; color: var(--muted); }
+.bar { height: 10px; background: var(--rule); border-radius: 99px; overflow: hidden; min-width: 100px; }
+.bar-fill { height: 100%; background: var(--teal); }
+.bar-fill.a { background: var(--muted); }
+.bar-fill.warn { background: var(--signal); }
+.bar-fill.w0 { width: 1%; } .bar-fill.w1 { width: 10%; } .bar-fill.w2 { width: 20%; } .bar-fill.w3 { width: 30%; } .bar-fill.w4 { width: 40%; } .bar-fill.w5 { width: 50%; }
+.bar-fill.w6 { width: 60%; } .bar-fill.w7 { width: 70%; } .bar-fill.w8 { width: 80%; } .bar-fill.w9 { width: 90%; } .bar-fill.w10 { width: 100%; }
+.win-row { display: grid; grid-template-columns: 140px 1fr 3rem; gap: 14px; align-items: center; margin: 10px 0; }
+.win-row b { text-align: right; font-family: var(--mono); font-weight: 500; }
+.issues { padding-left: 1.2em; margin: 0; }
+.issues li { padding: 6px 0; }
+.example { border-left: 3px solid var(--signal); background: var(--paper); border-radius: 0 10px 10px 0; padding: 16px 20px; }
+.example p { margin: .5em 0; }
+.quote-inline { font-style: italic; }
+.example .flag { margin-left: 6px; }
+
+/* Comparison table */
+.cmp th[scope="row"] { font-family: var(--sans); text-transform: none; letter-spacing: 0; font-size: .95rem; color: var(--ink); font-weight: 600; width: 18%; }
+.cmp thead th { font-size: .78rem; }
+.cmp th.us, .cmp td:nth-child(2) { background: var(--teal-soft); }
+.cmp thead th.us { color: var(--teal); }
+.cmp td { min-width: 150px; }
+
+/* Estimator */
+.estimator { margin-top: 32px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+.estimator h3 { font-size: 1.4rem; }
+.est-grid { display: grid; grid-template-columns: 1fr 2fr 1.4fr; gap: 16px; margin: 8px 0 16px; }
+.estimator label { display: block; font-size: .85rem; color: var(--muted); margin-bottom: 6px; }
+.estimator input, .estimator select { width: 100%; font: inherit; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); color: var(--ink); }
+.est-out { display: block; font-size: 1.15rem; padding: 14px 0 6px; border-top: 1px solid var(--rule); }
+.est-out b { font-family: var(--display); font-size: 1.7rem; font-weight: 500; color: var(--teal); }
+
+@media (max-width: 900px) {
+  .stats { grid-template-columns: 1fr 1fr; }
+  .est-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .win-row { grid-template-columns: 100px 1fr 2.5rem; }
+}
+.hero.sub { padding-bottom: 80px; }
